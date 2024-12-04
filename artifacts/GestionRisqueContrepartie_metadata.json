@@ -1,0 +1,265 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "portefeuille",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "limiteExposition",
+						"type": "uint256"
+					}
+				],
+				"name": "ContrepartieAjoutee",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "portefeuille",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "nouvelleExposition",
+						"type": "uint256"
+					}
+				],
+				"name": "ExpositionMiseAJour",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "portefeuille",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "exposition",
+						"type": "uint256"
+					}
+				],
+				"name": "LimiteDepassee",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_portefeuille",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_scoreCredit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_limiteExposition",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_probabiliteDefaut",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_pertesEnCasDeDefaut",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_collaterale",
+						"type": "uint256"
+					}
+				],
+				"name": "ajouterContrepartie",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_portefeuille",
+						"type": "address"
+					}
+				],
+				"name": "calculerPertesAttendues",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_portefeuille",
+						"type": "address"
+					}
+				],
+				"name": "calculerRatioCouverture",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_portefeuille",
+						"type": "address"
+					}
+				],
+				"name": "calculerRisque",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "contreparties",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "portefeuille",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "scoreCredit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "limiteExposition",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expositionCourante",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "collaterale",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "probabiliteDefaut",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pertesEnCasDeDefaut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_portefeuille",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_nouvelleExposition",
+						"type": "uint256"
+					}
+				],
+				"name": "mettreAJourExposition",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"GestionRisqueContrepartie.sol": "GestionRisqueContrepartie"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"GestionRisqueContrepartie.sol": {
+			"keccak256": "0x4fec749693253e9d92c25ade6046acd0fcdfb27c3dde65b3eeb918deaaaa6bb3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fbce9e5e71f52fbdd0a7695fc9a0d2b40bfc63f4e4eadd773f03c5c780a0d98c",
+				"dweb:/ipfs/QmPwDKPt4AsfjhUhNRmqwN4Wpg98Swu3wi7xPRYmVHdNfB"
+			]
+		}
+	},
+	"version": 1
+}
