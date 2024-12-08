@@ -64,8 +64,9 @@ contract GestionRisqueContrepartie {
         emit ExpositionMiseAJour(_portefeuille, _nouvelleExposition);
 
         // Si l'exposition dépasse la limite autorisée, émet un événement
-        if (contrepartie.expositionCourante > contrepartie.limiteExposition) {
-            emit LimiteDepassee(_portefeuille, contrepartie.expositionCourante);
+        if (_nouvelleExposition > contrepartie.limiteExposition) {
+            emit LimiteDepassee(_portefeuille, _nouvelleExposition);
+            revert("Exposition depasse la limite autorisee");
         }
     }
 

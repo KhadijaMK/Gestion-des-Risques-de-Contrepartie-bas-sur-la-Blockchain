@@ -238,7 +238,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"GestionRisqueContrepartie.sol": "GestionRisqueContrepartie"
+			"RisqueContrepartie.sol": "GestionRisqueContrepartie"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -252,12 +252,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"GestionRisqueContrepartie.sol": {
-			"keccak256": "0x4fec749693253e9d92c25ade6046acd0fcdfb27c3dde65b3eeb918deaaaa6bb3",
+		"RisqueContrepartie.sol": {
+			"keccak256": "0x6147898f80808de9041cbdf24ee5eaeabcc314ea6c9c4d7c789496e61efb740b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://fbce9e5e71f52fbdd0a7695fc9a0d2b40bfc63f4e4eadd773f03c5c780a0d98c",
-				"dweb:/ipfs/QmPwDKPt4AsfjhUhNRmqwN4Wpg98Swu3wi7xPRYmVHdNfB"
+				"bzz-raw://da6adcca58ea2fa59e67092ed75b2d674089aa1d555c8cbc0e53616919f98936",
+				"dweb:/ipfs/QmcAMGH7EjzarovW6wnG1gaPaxaqqKEExuC7KsSSCjgFtv"
 			]
 		}
 	},
